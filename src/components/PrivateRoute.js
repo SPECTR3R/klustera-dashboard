@@ -4,10 +4,11 @@ import { useAuth } from '../services/AuthService';
 import { useHistory } from 'react-router-dom';
 import AuthPage from '../pages/AuthPage';
 
+
+
 const PrivateRoute = ({ component, ...options }) => {
   const history = useHistory();
   const { token } = useAuth();
-  console.log(token)
   if (!token) {
     history.push('/');
     return <Route {...options} component={AuthPage} />;

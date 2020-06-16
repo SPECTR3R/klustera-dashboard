@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import LogoKlustera from '../components/LogoKlustera';
 import RoundButton from '../components/RoundButton';
 import { IoMdMoon, IoMdSunny, IoMdLogOut } from 'react-icons/io';
-import { Flex, useColorMode, Box, Divider } from '@chakra-ui/core';
+import { Flex, useColorMode, Box } from '@chakra-ui/core';
 
 import { useAuth } from '../services/AuthService';
 
@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <Flex
-   
+
       w={['90%', '90%', '80%', '992px']}
       pl="15px"
       height="65px"
