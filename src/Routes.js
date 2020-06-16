@@ -17,7 +17,7 @@ const Routes = () => (
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact component={AuthPage} path="/" />
+        <Route exact component={MainPage} path="/" />
         <PrivateRoute exact component={MainPage} path="/mainPage" />
       </Switch>
       <Footer />
