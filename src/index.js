@@ -12,7 +12,8 @@ ReactDOM.render(
         <ProvideAuth>
           <CSSReset />
           <style>
-            @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+            @import
+            url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;515;600;700&display=swap');
           </style>
           <Routes />
         </ProvideAuth>
