@@ -4,7 +4,7 @@ const LogoKlustera = props => (
   <svg
     id="logoK_svg__svg24"
     viewBox="0 0 200 35.011"
-    height=".8rem"
+    height="25px"
     xmlSpace="preserve"
     clipRule="evenodd"
     fillRule="evenodd"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../services/AuthService';
@@ -6,6 +6,7 @@ import { useAuth } from '../services/AuthService';
 import {
   Input,
   Stack,
+  Text,
   Icon,
   InputGroup,
   InputLeftElement,
@@ -17,16 +18,17 @@ const LoginForm = () => {
   const { handleSubmit, register } = useForm();
   const auth = useAuth();
   const history = useHistory();
+  const [errMsg, setErrMsg] = useState('');
 
   const onSubmit = async credentials => {
     const response = await auth.login(credentials);
-
-    if (response.err) {
-      console.log(response.err.message + 'joli');
+    if (typeof response === 'string') {
+      setErrMsg(response);
     } else {
-      console.log(response);
+      history.push('/mainPage');
     }
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={3}>
@@ -62,6 +64,9 @@ const LoginForm = () => {
         >
           Get access
         </Button>
+        <Text textAlign="center" color="red.600">
+          {errMsg}
+        </Text>
       </Stack>
     </form>
   );

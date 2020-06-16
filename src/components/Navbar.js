@@ -3,28 +3,31 @@ import { useLocation } from 'react-router-dom';
 
 import LogoKlustera from '../components/LogoKlustera';
 import RoundButton from '../components/RoundButton';
-import { GiExitDoor } from 'react-icons/gi';
-import { IoMdMoon, IoMdSunny } from 'react-icons/io';
+import { IoMdMoon, IoMdSunny, IoMdLogOut } from 'react-icons/io';
 import { Flex, useColorMode, Box, Divider } from '@chakra-ui/core';
+
+import { useAuth } from '../services/AuthService';
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const location = useLocation();
+  const auth = useAuth();
+
   return (
     <>
       <Flex
         w={['90%', '90%', '80%', '992px']}
         pl="15px"
-        height="50px"
+        height="85px"
         align="center"
         justify="space-between"
       >
         <a href="https://klustera.com/" target="blank">
           <LogoKlustera color={colorMode === 'light' ? '#1a202c' : 'white'} />
         </a>
-        <Box>
-          {location.pathname !== '/' && (
-            <RoundButton tooltip="logout" icoDay={GiExitDoor} link="/" />
+        <Box display="inline">
+          {location.pathname === '/mainPage' && (
+            <RoundButton tooltip="logout" icoDay={IoMdLogOut} fcn={auth.logout} />
           )}
           <RoundButton
             tooltip="Toggle color"

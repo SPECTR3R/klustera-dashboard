@@ -5,13 +5,10 @@ import handleAsync from '../services/handleAsync';
 //Axios config
 import axios from 'axios';
 const baseURL = 'https://voldemort.klustera.com';
-const service = axios.create({
-  baseURL,
-});
+const service = axios.create({ baseURL });
 
+// Create auth context
 const authContext = createContext();
-
-// Context provider component
 export function ProvideAuth({ children }) {
   const auth = useProvideAuth();
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
@@ -24,17 +21,20 @@ export const useAuth = () => {
 
 // Provider hook that creates auth object and handles state
 function useProvideAuth() {
-  const [user, setUser] = useState(null);
-
+  const [token, setToken] = useState(null);
   const login = async credentials => {
-    console.log(credentials);
     const response = await handleAsync(() => service.get('/login', { auth: credentials }));
-    setUser(response.user);
+    setToken(response.token);
     return response;
   };
 
+  const logout = async credentials => {
+    setToken(null);
+  };
+
   return {
-    user,
+    token,
     login,
+    logout,
   };
 }
