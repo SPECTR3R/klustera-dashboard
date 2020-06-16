@@ -13,11 +13,12 @@ import PrivateRoute from './components/PrivateRoute';
 import Navbar from './components/Navbar';
 
 const Routes = () => (
-  <Flex direction="column" align="center" justify="center" minHeight="100vh">
+  <Flex direction="column" align="center" justify="space-between" minHeight=" 100vh">
     <BrowserRouter>
       <Navbar />
       <Switch>
         <Route exact component={AuthPage} path="/" />
+        800
         <PrivateRoute exact component={MainPage} path="/mainPage" />
       </Switch>
       <Footer />

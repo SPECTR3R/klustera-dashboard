@@ -15,8 +15,7 @@ const Navbar = () => {
 
   return (
     <Flex
-      pos="fixed"
-      top="0"
+   
       w={['90%', '90%', '80%', '992px']}
       pl="15px"
       height="65px"

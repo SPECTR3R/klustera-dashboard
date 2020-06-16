@@ -6,8 +6,7 @@ const Footer = () => {
   return (
     <>
       <Flex
-        pos="fixed"
-        bottom="0"
+       
         m={0}
         w={['90%', '90%', '80%', '992px']}
         h="65px"

@@ -8,8 +8,8 @@ const AuthPage = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box w={['90%', '90%', '80%', '992px']}>
-      <Text px="15px" fontSize="2xl" fontFamily="Quicksand" fontWeight="bold">
+    <Box w={['90%', '90%', '80%', '992px']} overflow="auto" my={'50px'}>
+      <Text px="20px" mb={'50px'} fontSize="2xl" fontFamily="Quicksand" fontWeight="bold">
         This is a demo of Klustera's data statistics viewer. Please, provide your credentials in the
         form below.
       </Text>
