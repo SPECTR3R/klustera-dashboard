@@ -13,7 +13,7 @@ import PrivateRoute from './components/PrivateRoute';
 import Navbar from './components/Navbar';
 
 const Routes = () => (
-  <Flex direction="column" align="center" justify="center">
+  <Flex direction="column" align="center" justify="center" minHeight="100vh">
     <BrowserRouter>
       <Navbar />
       <Switch>

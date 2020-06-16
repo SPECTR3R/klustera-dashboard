@@ -5,15 +5,19 @@ import { Flex, Text, Divider, useColorMode } from '@chakra-ui/core';
 const Footer = () => {
   return (
     <>
-      <Divider
+      <Flex
+        pos="fixed"
+        bottom="0"
         m={0}
-        p={0}
-        orientation="horizontal"
         w={['90%', '90%', '80%', '992px']}
+        h="65px"
+        align="center"
+        justify="center"
+        borderTop="solid 1px"
         borderColor="gray.200"
-      />
-      <Flex m={0} w={['90%', '90%', '80%', '992px']} h="85px" align="center" justify="center">
-        <Text textAlign="center">2020 SPECTRER-B</Text>
+
+      >
+        <Text>2020 SPECTRER-B</Text>
       </Flex>
     </>
   );
