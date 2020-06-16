@@ -7,7 +7,6 @@ import axios from 'axios';
 const baseURL = 'https://voldemort.klustera.com';
 const service = axios.create({
   baseURL,
-  withCredentials: true,
 });
 
 const authContext = createContext();
@@ -29,7 +28,7 @@ function useProvideAuth() {
 
   const login = async credentials => {
     console.log(credentials);
-    const response = await handleAsync(() => service.post('/login', credentials));
+    const response = await handleAsync(() => service.get('/login', { auth: credentials }));
     setUser(response.user);
     return response;
   };

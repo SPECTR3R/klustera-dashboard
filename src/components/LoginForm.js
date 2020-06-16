@@ -19,12 +19,12 @@ const LoginForm = () => {
   const history = useHistory();
 
   const onSubmit = async credentials => {
-    console.log(credentials);
     const response = await auth.login(credentials);
+
     if (response.err) {
-      console.log(response.err.message);
+      console.log(response.err.message + 'joli');
     } else {
-      history.push('/mainPage');
+      console.log(response);
     }
   };
   return (
@@ -34,10 +34,10 @@ const LoginForm = () => {
           <InputGroup>
             <InputLeftElement children={<Icon name="question" />} />
             <Input
-              name="Username"
+              name="username"
               type="text"
-              placeholder="Username"
-              aria-label="Username"
+              placeholder="username"
+              aria-label="username"
               ref={register()}
             />
           </InputGroup>
@@ -46,10 +46,10 @@ const LoginForm = () => {
           <InputGroup>
             <InputLeftElement children={<Icon name="lock" />} />
             <Input
-              name="Password"
+              name="password"
               type="password"
-              placeholder="Password"
-              aria-label="Password"
+              placeholder="password"
+              aria-label="password"
               ref={register()}
             />
           </InputGroup>
