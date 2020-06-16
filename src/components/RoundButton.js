@@ -8,7 +8,7 @@ const RoundButton = ({ icoDay, icoNigth = icoDay, fcn, link, tooltip }) => {
 
   return (
     <Tooltip hasArrow label={tooltip} placement="bottom">
-      <Box as={Link} to={link}>
+      <Box as={link ? Link : Box} to={link}>
         <IconButton
           rounded="full"
           onClick={fcn}

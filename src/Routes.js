@@ -15,7 +15,7 @@ import Navbar from './components/Navbar';
 const Routes = () => (
   <Flex direction="column" align="center" justify="center">
     <BrowserRouter>
-    <Navbar/>
+      <Navbar />
       <Switch>
         <Route exact component={AuthPage} path="/" />
         <PrivateRoute exact component={MainPage} path="/mainPage" />

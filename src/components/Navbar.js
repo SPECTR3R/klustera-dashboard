@@ -1,20 +1,24 @@
 import React from 'react';
-
-import { Flex, useColorMode, Box, Divider } from '@chakra-ui/core';
-
 import { useLocation } from 'react-router-dom';
+
+import LogoKlustera from '../components/LogoKlustera';
+import RoundButton from '../components/RoundButton';
 import { GiExitDoor } from 'react-icons/gi';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
-import LogoKlustera from '../components/LogoKlustera';
-
-import RoundButton from '../components/RoundButton';
+import { Flex, useColorMode, Box, Divider } from '@chakra-ui/core';
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const location = useLocation();
   return (
     <>
-      <Flex w={['90%', '90%', '80%', '992px']} height="50px" align="center" justify="space-between">
+      <Flex
+        w={['90%', '90%', '80%', '992px']}
+        pl="15px"
+        height="50px"
+        align="center"
+        justify="space-between"
+      >
         <a href="https://klustera.com/" target="blank">
           <LogoKlustera color={colorMode === 'light' ? '#1a202c' : 'white'} />
         </a>
