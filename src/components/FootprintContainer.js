@@ -23,7 +23,9 @@ const FootprintContainer = ({ data }) => {
       fontFamily="Quicksand"
       color="gray.500"
       fontSize="sm"
-      my={4}
+      mt={4}
+      mb={'30px'}
+
     >
       <Bar data={graphData} options={graphOptions} />
     </Flex>

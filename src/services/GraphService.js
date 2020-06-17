@@ -29,6 +29,12 @@ export const genGraphData = visitorsDaily => {
 export const graphOptions = {
   maintainAspectRatio: false,
   responsive: true,
-  title: { display: true, text: 'Foot Traffic', fontSize: 25 },
+  title: {
+    display: true,
+    text: 'Foot Traffic',
+    fontSize: 25,
+    textAlign: 'left',
+    fontFamily: 'Quicksand',
+  },
   legend: { display: true, position: 'bottom', labels: { boxWidth: 20 } },
 };

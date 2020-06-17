@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 
 import { Input, Flex, FormLabel, Box, InputGroup, Button, FormControl } from '@chakra-ui/core';
 
-const ApiRequestForm = ({ submitFcn }) => {
-  const { handleSubmit, register } = useForm();
+const ApiRequestForm = ({ submitFcn, buttonLegend }) => {
+  const { handleSubmit, register, formState } = useForm();
 
   return (
     <Flex
@@ -12,8 +12,8 @@ const ApiRequestForm = ({ submitFcn }) => {
       onSubmit={handleSubmit(submitFcn)}
       as="form"
       p={3}
-      my={4}
-
+      mb={4}
+      mt={'30px'}
       boxShadow="2px 2px 2px 2px rgba(0,0,0,0.3)"
       rounded="lg"
       align="center"
@@ -82,8 +82,9 @@ const ApiRequestForm = ({ submitFcn }) => {
         m={5}
         _hover={{ boxShadow: 'md' }}
         _active={{ boxShadow: 'lg' }}
+        isLoading={formState.isSubmitting}
       >
-        Refresh
+        {buttonLegend}
       </Button>
     </Flex>
   );

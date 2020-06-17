@@ -8,7 +8,6 @@ const KPIsContainer = ({ data }) => {
   return (
     <Flex
       w={['90%', '90%', '80%', '992px']}
-      p={3}
       align="center"
       align-content="space-around"
       justify="space-around"
