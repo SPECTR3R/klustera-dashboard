@@ -14,14 +14,12 @@ export const genGraphData = visitorsDaily => {
     datasets: [
       {
         label: 'Visits',
-        backgroundColor: '#52c41a',
-        hoverBackgroundColor: '#95de64',
+        backgroundColor: 'green',
         data: visits,
       },
       {
         label: 'Passersby',
-        backgroundColor: '#1890ff',
-        hoverBackgroundColor: '#69c0ff',
+        backgroundColor: 'blue',
         data: passersby,
       },
     ],
