@@ -12,6 +12,8 @@ const ApiRequestForm = ({ submitFcn }) => {
       onSubmit={handleSubmit(submitFcn)}
       as="form"
       p={3}
+      my={4}
+
       boxShadow="2px 2px 2px 2px rgba(0,0,0,0.3)"
       rounded="lg"
       align="center"
@@ -44,7 +46,7 @@ const ApiRequestForm = ({ submitFcn }) => {
           <InputGroup>
             <Input
               placeholder="0"
-              max={24}
+              max={23}
               min={0}
               w="90px"
               name="startHour"
@@ -61,8 +63,8 @@ const ApiRequestForm = ({ submitFcn }) => {
         <FormControl isRequired>
           <InputGroup>
             <Input
-              placeholder="0"
-              max={24}
+              placeholder="23"
+              max={23}
               min={0}
               w="90px"
               name="endHour"

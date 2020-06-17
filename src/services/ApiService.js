@@ -16,7 +16,8 @@ export const GET_KPIS = async queryData => {
 
   return await handleAsync(() =>
     service.get(endPoint, {
-      headers: { 'Content-Type': 'application/json', 'x-access-token': token.trim() },
+      headers:
+      { 'Content-Type': 'application/json', 'x-access-token': token.trim() },
     })
   );
 };

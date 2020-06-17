@@ -12,7 +12,7 @@ const RenderKPIs = kpis => {
     'Frequency of Visits': { value: kpis.frequency, icon: TiChartLine },
     Impacts: { value: kpis.impacts, icon: FaClock },
     'Unique Loyals': { value: kpis.loyals, icon: FaRegSmile },
-    'Potential Clients': { value: kpis['potential-clients'], icon: GiCycle },
+    'Potential Clients': { value: kpis["potential_clients"], icon: GiCycle },
     Registers: { value: kpis.registers, icon: FaShoppingCart },
     Visits: { value: kpis.visits, icon: FaCheck },
   };

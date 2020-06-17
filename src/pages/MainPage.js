@@ -15,11 +15,7 @@ const MainPage = () => {
 
   const onSubmit = async queryData => {
     queryData.token = token;
-
-    //'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJhYjEzNTBmNi05ZmVkLTQxNjktOWVmZi0xZmJhZTMzNTU1ZWUiLCJleHAiOjE1OTIzNTAxNzN9.IX0J6DELBLmH9KUb4YaUvFUG4dHY8RUwnzITWcuHYjs';
-    console.log(token);
     setKpis(await GET_KPIS(queryData));
-
     setDailyFootprint(await FETCH_DAILY_FOOTPRINT(queryData));
   };
 
