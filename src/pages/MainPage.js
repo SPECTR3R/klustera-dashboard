@@ -21,7 +21,7 @@ const MainPage = () => {
 
   return (
     <Flex align="center" justify="center" direction="column">
-      <ApiRequestForm submitFcn={onSubmit} buttonLegend={kpis ? 'Fetch data' : 'Refresh'} />
+      <ApiRequestForm submitFcn={onSubmit} buttonLegend={!kpis ? 'Fetch data' : 'Refresh'} />
       {kpis && <KPIsContainer data={kpis} />}
       {dailyFootprint && <FootprintContainer data={dailyFootprint} />}
     </Flex>
