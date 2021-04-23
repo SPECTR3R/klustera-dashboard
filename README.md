@@ -1,8 +1,7 @@
 # Technical Test App for Klustera
+This project is a challenge dashboard by Klustera.com [Klustera.com](https://www.Klustera.com)
 
-This project is a technical test to apply for a developer position at [Klustera.com](https://www.Klustera.com)
-
-## Requirements
+## Interactions
 
 To run this project, please:
 
